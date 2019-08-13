@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>CardAccessServices_Casmtp</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/Apache-2.0">Apache Software License (ASL)</license>
     <channel>community</channel>
@@ -13,11 +13,12 @@ You will need a compatible merchant account with any of the numerous  financial 
 &#xD;
 Please contact info@cardaccess.com.au (http://www.cardaccess.com.au) for more information&#xD;
 </description>
-    <notes>Release 1.0.0 added purchase &amp; refund</notes>
+    <notes>Release 1.0.1&#xD;
+- renamed to be consistent with rest of doco</notes>
     <authors><author><name>Card Access Services</name><user>cardaccessservices</user><email>techadmin@rt.cardaccess.com.au</email></author></authors>
-    <date>2012-06-26</date>
-    <time>23:42:33</time>
-    <contents><target name="mageetc"><dir name="modules"><file name="CardAccessServices_Casmtp.xml" hash="78d9b601cf91a93dddc4356edff54870"/></dir></target><target name="magecommunity"><dir name="CardAccessServices"><dir name="Casmtp"><dir name="Helper"><file name="Data.php" hash="018d64d703c1eb68c28068c0de721cbc"/></dir><dir name="Model"><file name="PaymentMethod.php" hash="3c3b66c09004e2a4d8b9dcdcee7d2013"/></dir><file name="casmiscutil.php" hash="23e8224f830b7041a69290d642db27e1"/><file name="casmtpprotocol.php" hash="09dc63f173f10e2fdd4b8c8cf02d53bf"/><dir name="etc"><file name="config.xml" hash="e3da56d0f4bee8f61bd7aa365d15301f"/><file name="system.xml" hash="814ae364c5b84f5949601a4a8693e0a3"/></dir></dir></dir></target></contents>
+    <date>2012-06-27</date>
+    <time>01:09:12</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="CardAccessServices_Casmtp.xml" hash="78d9b601cf91a93dddc4356edff54870"/></dir></target><target name="magecommunity"><dir name="CardAccessServices"><dir name="Casmtp"><dir name="Helper"><file name="Data.php" hash="018d64d703c1eb68c28068c0de721cbc"/></dir><dir name="Model"><file name="PaymentMethod.php" hash="3c3b66c09004e2a4d8b9dcdcee7d2013"/></dir><file name="casmiscutil.php" hash="23e8224f830b7041a69290d642db27e1"/><file name="casmtpprotocol.php" hash="09dc63f173f10e2fdd4b8c8cf02d53bf"/><dir name="etc"><file name="config.xml" hash="d0d79f8c09fea654b36497fcfb9ab2e3"/><file name="system.xml" hash="e90a5197cfe90c13c54b0a5f85e7b2b1"/></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.2</min><max>6.0.0</max></php><extension><name>hash</name><min>1.1</min><max></max></extension></required></dependencies>
 </package>

@@ -4,7 +4,7 @@
 		<payment>
 			<groups>
 				<casmtp translate="label">
-					<label>Card Access Services Casmtp</label>
+					<label>Card Access Services (Merchant Hosted)</label>
 					<comment><![CDATA[<a href="http://www.cardaccess.com.au" target="_blank">For more information please visit http://www.cardaccess.com.au</a>]]></comment>
 					<sort_order>1</sort_order>
 					<show_in_default>1</show_in_default>
