@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<payment>
+			<groups>
+				<casmtp translate="label">
+					<label>Card Access Services Casmtp</label>
+					<comment><![CDATA[<a href="http://www.cardaccess.com.au" target="_blank">For more information please visit http://www.cardaccess.com.au</a>]]></comment>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<comment><![CDATA[Enable this to allow transaction processing through Card Access Services using hosted payment pages]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+						<title translate="label">
+							<label>Title</label>
+							<comment><![CDATA[The name that will be shown on the checkout pages]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</title>
+						<is_test translate="label">
+							<label>Use Test Gateway</label>
+							<comment><![CDATA[Send transactions to the test gateway?<br><b>Please be sure to set this to "No" before going live</b>]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</is_test>
+						<etx_merchant translate="label">
+							<label>ETX Merchant ID</label>
+							<comment><![CDATA[The ETX merchant ID<br><i>This must be set to the value assigned by Card Access Services</i>]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</etx_merchant>
+						<hash_auth translate="label">
+							<label>Hash authentication</label>
+							<comment><![CDATA[The hash authentication password<br><i>This must be set to the value assigned by Card Access Services</i>]]></comment>
+							<frontend_type>password</frontend_type>
+							<backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</hash_auth>
+						<useccv translate="label">
+							<label>Require CVV</label>
+							<comment><![CDATA[If this is enabled then the cardholder will be required to enter a CVV with each transaction. This may be mandated by your bank as a condition of transaction processing - double check with your bank for more details]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</useccv>
+						<cctypes translate="label">
+							<label>Credit Card Types</label>
+							<comment><![CDATA[List the card types offered during checkout and on the admin screens<br><i>Not all credit card types will be supported by your merchant account; in addition, some card types may require an additional merchant account<br>Once your have setup the merchant account(s) with the relevant financial institutions, please let us know the details as well as which card types you wish to support, this will be configured at the same time as the ETX merchant above</i>]]></comment>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>adminhtml/system_config_source_payment_cctype</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</cctypes>
+						<order_status translate="label">
+							<label>New order status</label>
+							<comment><![CDATA[Update the order to this status after the transaction has been completed]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_order_status</source_model>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</order_status>
+						<sort_order translate="label">
+							<label>Sort order</label>
+							<comment><![CDATA[The relative order in which this payment method is shown. The lower the number, the higher up this payment method will appear in the list]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sort_order>
+						<allowspecific translate="label">
+							<label>Payment from applicable countries</label>
+							<comment><![CDATA[Whether to restrict cardholders to certain countries]]></comment>
+							<frontend_type>allowspecific</frontend_type>
+							<sort_order>10</sort_order>
+							<source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</allowspecific>
+						<specificcountry translate="label">
+							<label>Payment from specific countries</label>
+							<comment><![CDATA[Select the specific countries to restrict payments to<br><i>This only has effect if "Specific Countries" has been selected</i>]]></comment>
+							<frontend_type>multiselect</frontend_type>
+							<sort_order>11</sort_order>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</specificcountry>
+						<proxy_server_host translate="label">
+							<label>Proxy server host</label>
+							<comment><![CDATA[The hostname or IP address of the proxy server<br>This is only required if you are using a proxy, otherwise it can be left blank]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</proxy_server_host>
+						<proxy_server_port translate="label">
+							<label>Proxy server port</label>
+							<comment><![CDATA[The port number of the proxy server<br>This is only required if you are using a proxy, otherwise it can be left blank. If a host is specified but the port number is left blank then the port number will default to 8080]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</proxy_server_port>
+						<proxy_login_username translate="label">
+							<label>Proxy server username</label>
+							<comment><![CDATA[The username to use when accessing the proxy server<br>This is only required if you are using a proxy and it requires authentication, otherwise it can be left blank]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>14</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</proxy_login_username>
+						<proxy_login_password translate="label">
+							<label>Proxy server password</label>
+							<comment><![CDATA[The password to use when accessing the proxy server<br>This is only required if you are using a proxy and it requires a password, otherwise it can be left blank]]></comment>
+							<frontend_type>password</frontend_type>
+							<backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</proxy_login_password>
+						<log_events translate="label">
+							<label>Log Events</label>
+							<comment><![CDATA[Log each payment event into the system log (if enabled)?]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>16</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</log_events>
+					</fields>
+				</casmtp>
+			</groups>
+		</payment>
+	</sections>
+</config>
