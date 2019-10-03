@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/CardAccessServices_Casmtp",
+    "name": "OpenMageModuleFostering\/CardAccessServices_Casmtp",
     "type": "magento-module",
     "license": "Apache-Software-License-(ASL)",
     "homepage": "",
     "description": "Merchant hosted transaction processing using the Card Access Services gateway",
     "authors": [
-    {
-        "name": "Card Access Services",
-        "email": "techadmin@rt.cardaccess.com.au"
-    }
-],
+        {
+            "name": "Card Access Services",
+            "email": "techadmin@rt.cardaccess.com.au"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
