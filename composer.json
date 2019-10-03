@@ -1,5 +1,5 @@
 {
-    "name": "OpenMageModuleFostering\/CardAccessServices_Casmtp",
+    "name": "openmage-module-fostering\/cardaccessservices_casmtp",
     "type": "magento-module",
     "license": "Apache-Software-License-(ASL)",
     "homepage": "",
